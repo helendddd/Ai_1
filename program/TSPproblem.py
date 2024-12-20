@@ -54,8 +54,7 @@ class TSPProblem(Problem):
         return state + (action,)
 
     def is_goal(self, state):
-        """Цель достигнута, если все города посещены и вернулись в начальный.
-        """
+        """Цель достигнута, если все узлы посещены и вернулись в начальный."""
         return len(state) == len(self.cities) + 1 and state[0] == state[-1]
 
     def action_cost(self, s, a, s1):
